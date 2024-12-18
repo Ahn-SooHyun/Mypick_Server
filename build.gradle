@@ -32,13 +32,33 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4'
-	implementation 'org.springframework.ai:spring-ai-mongodb-atlas-store-spring-boot-starter'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.4'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	//Mongo DB
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
+	/* AOP 테스트 */
+	// https://mvnrepository.com/artifact/org.springframework/spring-aop
+	implementation group: 'org.springframework', name: 'spring-aop', version: '6.1.14'
+	// https://mvnrepository.com/artifact/org.springframework/spring-tx
+	implementation group: 'org.springframework', name: 'spring-tx', version: '6.1.14'
+	// https://mvnrepository.com/artifact/org.aspectj/aspectjweaver
+	runtimeOnly group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.22.1'
+
+	// https://mvnrepository.com/artifact/org.apache.cxf/cxf-rt-rs-security-cors
+	implementation group: 'org.apache.cxf', name: 'cxf-rt-rs-security-cors', version: '4.0.5'
+
+	// JSON 라이브러리 추가
+	implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+
+	//BCtypt
+	// https://mvnrepository.com/artifact/org.mindrot/jbcrypt
+	implementation group: 'org.mindrot', name: 'jbcrypt', version: '0.4'
 }
 
 dependencyManagement {
